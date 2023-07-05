@@ -1,0 +1,47 @@
+POST http://localhost:3030/checkin
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "sammidev4@mail.com"
+}
+
+###
+
+POST http://localhost:3030/schedule?email=sammidev4@gmail.com
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "Konsep Pemrograman",
+  "day": "tuesday"
+}
+
+
+###
+
+GET http://localhost:3030/schedule?email=sammidev4@gmail.com
+Accept: application/json
+Content-Type: application/json
+
+
+###
+
+GET http://localhost:3030/schedule?email=sammidev4@gmail.com&day=tuesday
+Accept: application/json
+Content-Type: application/json
+
+###
+DELETE http://localhost:3030/schedule?email=sammidev4@gmail.com&id=1
+
+
+###
+PATCH http://localhost:3030/schedule?email=sammidev4@gmail.com&id=2
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "lala123",
+  "day": "monday"
+}
+
